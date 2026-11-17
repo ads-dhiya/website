@@ -23,12 +23,6 @@ npm run build      # dist/
 ## Deploy (Vercel)
 Import the repo, framework = Astro, add the `SMTP_*` variables (and optional `MAIL_FROM`) in Project → Environment Variables. The API route runs as a serverless function; everything else is static.
 
-## Diwali inauguration
-- The homepage shows the launch introduction for its first 10 appearances in the same browser profile and origin. Reloading counts as another appearance; cutting, skipping or pressing Escape does not increment it again. The count persists in localStorage (`dhiya:diwali-launch:2026:v1`). Clearing site storage resets it. If localStorage is blocked, sessionStorage is used; if neither works, the website opens normally.
-- Press Enter or click the ghee-gold ribbon to open Dhiya. A compact plum panel sits over Dhiya's plum, lilac and blue light bands. Cutting the ribbon reveals a gold “Welcome to Dhiya” before the bands dissolve into the homepage. **Skip intro** and Escape skip the animation. Reduced-motion preferences show a brief static welcome.
-- During local development, `/?launch-preview=1` previews the ceremony without consuming an appearance. This override is disabled in production builds.
-- The small lamp in the announcement ribbon lights the Diwali lamps for six seconds. The normal design-partner link remains separate.
-
 ## Conventions
 - Racks are 52U. Figures are USD. No case studies, no "watch the film".
 - Product accents: Ayana Ember `#B03729`, Neev Engine cyan `#3EC6E8`, Vitana Hyperspace `#315ADE`, Aire Sky `#6CA9CB`; page tints are each accent's lightest shade. Brand lilac `#9B5DE5`, ink `#221A21`, page `#EAE0F0`.
