@@ -1,10 +1,15 @@
 /** Branded HTML emails for /api/contact. Table layout + inline styles so Gmail, Outlook and Apple Mail render them the same. */
 import { site } from "../data/site";
+import { LOGO_PNG_BASE64 } from "./email-logo";
 
 const C = { chalk: "#F7F0ED", card: "#FFFFFF", ink: "#221A21", sub: "#654B75", lilac: "#EAE0F0", soft: "#C8B1D6", plum: "#250B1E", plumText: "#FFF9FE", accent: "#9B5DE5" };
 const FONT = `'Hanken Grotesk',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif`;
 const MONO = `'IBM Plex Mono',Menlo,Consolas,monospace`;
-const LOGO = `${site.url}/media/email-logo.png`;
+
+/** The logo travels inside the email as an inline (CID) attachment, so it shows even before/without the website serving it. */
+export const LOGO_CID = "dhiya-logo@dhiya.ai";
+export const logoAttachment = () => ({ filename: "dhiya.png", content: Buffer.from(LOGO_PNG_BASE64, "base64"), contentType: "image/png", cid: LOGO_CID, contentDisposition: "inline" as const });
+const LOGO = `cid:${LOGO_CID}`;
 
 const LABELS: Record<string, string> = {
   name: "Name", email: "Email", company: "Company", role: "Role", segment: "They run", capacity: "Capacity",
