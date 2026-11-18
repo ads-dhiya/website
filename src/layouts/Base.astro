@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import Announcement from "../components/Announcement.astro";
+import LaunchCeremony from "../components/LaunchCeremony.astro";
 import { site } from "../data/site";
 interface Props { title: string; description: string; path: string; kind?: "WebSite" | "SoftwareApplication" | "AboutPage" | "WebPage"; product?: string; dataP?: string; noNav?: boolean; noAnnounce?: boolean }
 const { title, description, path, kind = "WebSite", product, dataP, noNav = false, noAnnounce = false } = Astro.props;
@@ -38,6 +39,7 @@ ld.push({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListE
 <slot name="head" />
 </head>
 <body data-p={dataP}>
+{path === "/" && <LaunchCeremony />}
 {!noAnnounce && <Announcement announcement={site.announcement} />}
 {!noNav && <header class:list={["site-header", { "site-header-home": path === "/" }]}><Nav /></header>}
 <slot />

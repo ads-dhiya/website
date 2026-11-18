@@ -14,7 +14,7 @@
 
 ## Company
 - [About](https://dhiya.ai/about): twenty years of data centre operations experience; building in stealth; investor contact.
-- Contact: hi@dhiya.ai · Investors: founders@dhiya.ai
+- Contact: dhiya@dhiya.ai · Investors: founders@dhiya.ai
 
 ## Legal
 - [Privacy](https://dhiya.ai/privacy): what the website collects, who processes it and your rights.

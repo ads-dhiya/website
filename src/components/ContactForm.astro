@@ -1,5 +1,5 @@
 ---
-/** Basic-details form. kind="partner" goes to hi@, kind="investor" to founders@. Posts to /api/contact; forms.js falls back to mailto if the endpoint is missing. */
+/** Basic-details form. kind="partner" goes to dhiya@, kind="investor" to founders@. Posts to /api/contact; forms.js falls back to mailto if the endpoint is missing. */
 import { site } from "../data/site";
 interface Props { kind?: "partner" | "investor"; button?: string; variant?: "default" | "home" | "partner" }
 const { kind = "partner", button = kind === "investor" ? "Reach the founders →" : "Talk to us →", variant = "default" } = Astro.props;

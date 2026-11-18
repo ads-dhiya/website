@@ -1,7 +1,7 @@
 export const site = {
   name: "Dhiya Labs",
   url: "https://dhiya.ai",
-  mail: "hi@dhiya.ai",
+  mail: "dhiya@dhiya.ai",
   investors: "founders@dhiya.ai",
   endpoint: "/api/contact",
   announcement: "Design partner places are open",

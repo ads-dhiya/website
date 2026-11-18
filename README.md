@@ -14,7 +14,7 @@ npm run build      # dist/
 - `src/pages/[slug].astro` + `src/components/ProductPage.astro` — DIL, Ayana, Neev, Vitana, Aire. **All copy for these pages is data:** `src/data/products.ts` (hero, steps, mock-ups, "what makes it different", integrations, CTA).
 - `src/pages/about.astro` — About + investor block.
 - `src/pages/privacy.astro`, `terms.astro`, `security.astro` + `src/components/LegalPage.astro` — legal pages. Copy is in `src/data/legal.ts`; company name, address, jurisdiction and last-updated date are in `site.legal` (`src/data/site.ts`).
-- `src/components/ContactForm.astro` — the basic-details form. `kind="partner"` → hi@dhiya.ai, `kind="investor"` → founders@dhiya.ai (addresses in `src/data/site.ts`).
+- `src/components/ContactForm.astro` — the basic-details form. `kind="partner"` → dhiya@dhiya.ai, `kind="investor"` → founders@dhiya.ai (addresses in `src/data/site.ts`).
 - `src/pages/api/contact.ts` — receives the form (JSON), emails every submission to dhiya@dhiya.ai over SMTP (`SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, optional `MAIL_FROM`).
 - `public/iso.js` — the isometric hero scenes (pure SVG, brand colours from CSS vars). `public/forms.js` — form handling with a mailto fallback when no endpoint is set.
 - `src/styles/global.css` (tokens, nav, footer, product pages, forms) and `src/styles/home.css` (homepage only).
@@ -22,6 +22,11 @@ npm run build      # dist/
 
 ## Deploy (Vercel)
 Import the repo, framework = Astro, add the `SMTP_*` variables (and optional `MAIL_FROM`) in Project → Environment Variables. The API route runs as a serverless function; everything else is static.
+
+## Launch intro
+- The homepage shows a launch curtain for its first 10 appearances in the same browser profile (counted in local storage; no tracking). Reloading counts as another appearance.
+- Click the Mandala or press Enter: its eight rays unfold, the curtain lifts and a short welcome shows. "Skip intro" or Escape closes it at once.
+- During local development, `/?launch-preview=1` previews it without consuming an appearance. This override is disabled in production builds.
 
 ## Conventions
 - Racks are 52U. Figures are USD. No case studies, no "watch the film".
