@@ -1,0 +1,2 @@
+/* Scoped styles for Mock: every element it renders carries [data-s-mock]. */
+.mock-equipment[data-s-mock]+.cards{margin-top:14px}

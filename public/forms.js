@@ -1,4 +1,4 @@
-/* Contact forms. Posts JSON to data-endpoint when one is set (the Astro API route);
+/* Contact forms. Posts JSON to data-endpoint when one is set (the Next.js API route);
    without an endpoint (static preview) it falls back to a pre-filled mailto. */
 (function(){
   var forms=[].slice.call(document.querySelectorAll('form.cf')); if(!forms.length) return;

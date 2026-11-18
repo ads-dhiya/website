@@ -1,4 +1,4 @@
-// Generated from the design source. Edit copy here; the page template is src/components/ProductPage.astro.
+// Generated from the design source. Edit copy here; the page template is src/components/ProductPage.tsx.
 export type Product = typeof products[keyof typeof products];
 export const products = {
   "dil": {

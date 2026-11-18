@@ -1,0 +1,4 @@
+/* Scoped styles for Base: the sticky site header. */
+.site-header[data-s-base]{position:sticky;top:0;z-index:60;display:flow-root;height:80px;padding:12px 0;pointer-events:none}
+.site-header[data-s-base] .site-nav.nav{margin:0 auto;pointer-events:auto}
+.site-header-home[data-s-base]{margin-bottom:-80px}
